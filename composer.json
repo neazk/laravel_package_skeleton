@@ -1,0 +1,59 @@
+{
+    "name": "neazk/package_name",
+    "description": "",
+    "keywords": [
+        "neazk",
+        "package name",
+        "package_name"
+    ],
+    "homepage": "https://github.com/neazk/package_name",
+    "type": "library",
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.17",
+        "pestphp/pest": "^2.35",
+        "orchestra/testbench": "^9.0",
+        "nunomaduro/collision": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neazk\\SpatiePermissionsUi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neazk\\SpatiePermissionsUi\\Tests": "tests",
+            "Neazk\\SpatiePermissionsUi\\atabase\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibrahim adel",
+            "email": "neazki@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "neazk\\package_name\\Providers\\pkgServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
